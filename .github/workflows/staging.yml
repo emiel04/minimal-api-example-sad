@@ -54,5 +54,5 @@ jobs:
       - name: Deploy to Azure
         run: |
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
-                           --name delaey-webapp-staging-westeurope-01 \
-                           --src-path ../minimal-api-example-sad
+                          --name delaey-webapp-staging-westeurope-01 \
+                          --src-path ./minimal-api-example-sad
