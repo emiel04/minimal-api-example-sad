@@ -52,4 +52,4 @@ jobs:
         run: |
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
                            --name delaey-webapp-staging-westeurope-01 \
-                           --src-path ./out
+                           --src-path .
