@@ -57,7 +57,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: Deploy to Azure
         run: |
-          az webapp deploy --resource-group delaey-rg-production-westeurope-01 \
-                          --name delaey-webapp-production-westeurope-01 \
+          az webapp deploy --resource-group delaey-rg-prod-westeurope-01 \
+                          --name delaey-webapp-prod-westeurope-01 \
                           --src-path ./app.zip \
                           --type zip
