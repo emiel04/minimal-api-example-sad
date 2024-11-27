@@ -63,4 +63,5 @@ jobs:
           ls -la ./app
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
                           --name delaey-webapp-staging-westeurope-01 \
-                          --src-path ./app/out
+                          --src-path ./app.zip \
+                          --type zip
