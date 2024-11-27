@@ -476,23 +476,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\olivi\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\lolpv\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\examples-aspnet-minimalapi\\MinimalAPI\\MinimalAPI.csproj",
+      "projectUniqueName": "C:\\Users\\lolpv\\OneDrive - Hogeschool West-Vlaanderen\\School\\SAD\\lab-06-repo-minimalapi\\MinimalAPI\\MinimalAPI.csproj",
       "projectName": "MinimalAPI",
-      "projectPath": "C:\\Code\\examples-aspnet-minimalapi\\MinimalAPI\\MinimalAPI.csproj",
-      "packagesPath": "C:\\Users\\olivi\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\examples-aspnet-minimalapi\\MinimalAPI\\obj\\",
+      "projectPath": "C:\\Users\\lolpv\\OneDrive - Hogeschool West-Vlaanderen\\School\\SAD\\lab-06-repo-minimalapi\\MinimalAPI\\MinimalAPI.csproj",
+      "packagesPath": "C:\\Users\\lolpv\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lolpv\\OneDrive - Hogeschool West-Vlaanderen\\School\\SAD\\lab-06-repo-minimalapi\\MinimalAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\olivi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lolpv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -507,8 +508,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Code\\examples-aspnet-minimalapi\\ClassLib\\ClassLib.csproj": {
-              "projectPath": "C:\\Code\\examples-aspnet-minimalapi\\ClassLib\\ClassLib.csproj"
+            "C:\\Users\\lolpv\\OneDrive - Hogeschool West-Vlaanderen\\School\\SAD\\lab-06-repo-minimalapi\\ClassLib\\ClassLib.csproj": {
+              "projectPath": "C:\\Users\\lolpv\\OneDrive - Hogeschool West-Vlaanderen\\School\\SAD\\lab-06-repo-minimalapi\\ClassLib\\ClassLib.csproj"
             }
           }
         }
@@ -517,11 +518,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -556,7 +552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
