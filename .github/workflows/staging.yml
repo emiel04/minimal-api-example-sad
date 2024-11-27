@@ -23,7 +23,8 @@ jobs:
       - name: Build Application
         run: |
           dotnet restore
-          dotnet publish -c Release -o out
+          dotnet publish -c Release -o ./out
+          ls -la ./out
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
@@ -47,7 +48,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: List files in the directory
         run: |
-          ls -la
+          ls -la ../
       - name: Deploy to Azure
         run: |
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
