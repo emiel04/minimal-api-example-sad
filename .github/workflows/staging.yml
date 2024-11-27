@@ -48,9 +48,11 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: List files in the directory
         run: |
+          pwd
           ls -la ../
+          ls -la
       - name: Deploy to Azure
         run: |
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
                            --name delaey-webapp-staging-westeurope-01 \
-                           --src-path .
+                           --src-path ../minimal-api-example-sad
