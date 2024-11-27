@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3.0.3
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.0'
 
@@ -26,11 +26,16 @@ jobs:
           dotnet publish -c Release -o ./out
           ls -la ./out
 
+      - name: Create Zip File
+        run: |
+          zip -r app.zip ./out
+          ls -la app.zip
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: dotnet-app
-          path: ./out
+          path: app.zip
 
   deploy:
     needs: build
@@ -40,19 +45,20 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dotnet-app
+
       - name: Azure Login
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: List files in the directory
+
+      - name: Extract the Zip File
         run: |
-          pwd
-          ls -la ../
-          ls -la
+          unzip app.zip -d ./app
+          ls -la ./app
       - name: Deploy to Azure
         run: |
           az webapp deploy --resource-group delaey-rg-staging-westeurope-01 \
                           --name delaey-webapp-staging-westeurope-01 \
-                          --src-path ./minimal-api-example-sad/minimal-api-example-sad
+                          --src-path ./app
